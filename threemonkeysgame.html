@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>See No Evil, Hear No Evil, Speak No Evil</title>
+
+    <link rel="stylesheet" href="threemonkeysgame.css">
+ 
+</head>
+ 
+
+
+<body> 
+  <p class="js-heading"> See No Evil  -  Hear No Evil  -  Speak No Evil</p>
+  <p class="js-instruction">CLICK ON A <span style ="color: brown">MONKEY </span>TO START <span style ="color: green">GAME</span></p>
+ <div class="js-images"> 
+  <button onclick="playGame('See No Evil')"><img src ="images/See No Evil.PNG" class="js-image-button see-no-evil"><p>See No Evil</p></button>
+  <button onclick="playGame('Hear No Evil')"><img src ="images/Hear No Evil.PNG" class="js-image-button see-no-evil"><p>Hear No Evil</p></button>
+  <button onclick="playGame('Speak No Evil')"><img src ="images/Speak No Evil.PNG" class="js-image-button see-no-evil"><p>Speak No Evil</p></button>
+  </div>
+
+<div><button class="js-reset-button" onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties  = 0;
+      document.querySelector('.js-pick').innerHTML ='Computer picked: NO PICK  | You picked:   NO PICK';
+      document.querySelector('.js-result').innerHTML ='----------';
+      localStorage.removeItem('score');
+      updateScoreElement();
+"><img src ="images/banana.webp" class="js-banana"></Button></div>
+
+<p class="reset">Click to Reset</p>
+
+<p class="js-pick"></p>
+<p class="js-result"></p>
+<p class="js-score"></p>
+
+<p class="js-fyi"> FYI, All our Monkeys are uncaged and well fed.</p>
+
+ <script src="threemonkeysgame.js"></script>
+
+</body>
+</html> 
